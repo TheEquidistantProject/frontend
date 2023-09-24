@@ -1,25 +1,30 @@
 import Link from 'next/link';
-import { Menu, Search } from 'lucide-react';
+import { Github, Search } from 'lucide-react';
 import Image from 'next/image';
 import RootContainer from './ui/containers/root';
 
 const Navbar = () => (
 	<RootContainer>
 		<nav className="flex items-center justify-between pb-8 pt-10">
-			<button>
-				<Menu size={24} />
-			</button>
+			<a
+				href="https://github.com/TheEquidistantProject"
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				<Github size={24} />
+			</a>
 
+			<h1 className="sr-only">The Equidistant</h1>
 			<Image
 				src="/logo.svg"
 				alt="The Equidistant Logo"
-				width={119}
-				height={55}
+				width={131}
+				height={61}
 			/>
 
-			<button>
+			<Link href="/search">
 				<Search size={24} />
-			</button>
+			</Link>
 		</nav>
 	</RootContainer>
 );

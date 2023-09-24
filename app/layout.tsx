@@ -1,8 +1,7 @@
-import Navbar from '@/components/navbar';
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { cn } from '@/lib/utils';
+import Footer from "@/components/footer";
 
 const satoshi = localFont({
 	src: [
@@ -20,7 +19,7 @@ const satoshi = localFont({
 export const metadata: Metadata = {
 	title: 'The Equidistant',
 	description:
-		'A news site that stands as a beacon against the tide of misinformation and bias prevalent in the news sphere',
+		'A news site that stands as a beacon against the tide of misinformation and bias prevalent in the news sphere.',
 };
 
 export default function RootLayout({
@@ -31,8 +30,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={satoshi.className}>
-				<Navbar />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
